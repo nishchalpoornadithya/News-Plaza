@@ -33,7 +33,7 @@ function Home(props) {
 		);
   }
 
-  const viewMoreClicked = (index) => {
+  const cardClicked = (index) => {
     if(news[index].url) {
       window.open(news[index].url, '_blank').focus();
     } else {
@@ -59,7 +59,7 @@ function Home(props) {
                 description={newsItem.description} 
                 author={newsItem.author} 
                 timeStamp={newsItem.publishedAt} routeText={"more..."}
-                handleViewMoreClick={() => viewMoreClicked(index)}
+                handleCardClick={() => cardClicked(index)}
               />;
 					  })
 					: null}
