@@ -1,30 +1,29 @@
-
-@import '../../../assets/css-variables.css';
+@import "../../../assets/css-variables.css";
 
 .nav-bar-container .nav-bar {
-  display: flex;
-  justify-content: space-evenly;
+	display: flex;
+	justify-content: space-evenly;
 }
 
 .nav-bar-item {
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--light-orange);
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: var(--light-orange);
 
-  padding: 5px;
+	padding: 5px;
 
-  border-width: 1px;
-  border-style: solid;
-  border-color: var(--light-orange);
-  box-sizing: border-box;
-  border-radius: 8px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: var(--light-orange);
+	box-sizing: border-box;
+	border-radius: 8px;
 
-  cursor: pointer;
-  transition: border .4s ease-in;
+	cursor: pointer;
+	transition: border 0.4s ease-in;
 }
 
-.nav-bar-highlight{
-  background-color:  var(--light-orange);
-  color: white;
+.nav-bar-highlight {
+	background-color: var(--light-orange);
+	color: white;
 }

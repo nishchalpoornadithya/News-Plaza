@@ -9,7 +9,7 @@ function Card(props) {
 
 	return (
 		<div className="card">
-			<section className='card-content' onClick={() => handleCardClick()}>
+			<section className="card-content" onClick={() => handleCardClick()}>
 				<header className="card-header">
 					<figure>
 						<div className="news-item-image" style={{ background: `url(${imgUrl})` }} alt="Image"></div>

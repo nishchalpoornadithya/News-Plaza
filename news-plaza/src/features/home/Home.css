@@ -1,15 +1,14 @@
-
 .home-container {
-  margin: 10px 10%;
+	margin: 10px 10%;
 }
 
 body {
-  background-color: var(--background-color);
+	background-color: var(--background-color);
 }
 
 .news-items-container {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-top: 10px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 10px;
 }

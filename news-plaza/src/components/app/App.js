@@ -1,16 +1,15 @@
-import React from 'react';
+import React from "react";
 
-import Home from '../../features/home/Home';
+import Home from "../../features/home/Home";
 
-import './App.css';
+import "./App.css";
 
 function App() {
-
-  return (
-    <div className="app-conatiner">
-      <Home/>
-    </div>
-  );
+	return (
+		<div className="app-conatiner">
+			<Home />
+		</div>
+	);
 }
 
 export default App;
