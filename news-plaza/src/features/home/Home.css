@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: #F5F8FE;
+  background-color: var(--background-color);
 }
 
 .news-items-container {

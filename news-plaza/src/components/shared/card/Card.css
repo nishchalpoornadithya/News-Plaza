@@ -4,7 +4,7 @@
   margin: 10px 10px 0px;
   border-radius: 8px;
   box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.11);
-  color: #5e5e5e;
+  color: var(--font-color);
 }
 
 figure {
@@ -18,38 +18,38 @@ figure {
 }
 
 h4 {
-  -webkit-line-clamp: 2;
   margin: 0;
   margin-top: 10px;
   padding: 5px;
   padding-bottom: 0;
   height: 3rem;
   line-height: 1.5em;
+  -webkit-line-clamp: 2;
 }
 
 .card-header .news-item-image {
-  background-size: cover;
   height: 150px;
   max-width: 100%;
   border-radius: 5px 5px 0px 0px;
+  background-size: cover;
 }
 
 .card-body {
-  -webkit-line-clamp: 4;
   font-size: 14px;
   font-weight: 500;
   padding: 5px;
   padding-bottom: 0;
   height: 20%;
+  -webkit-line-clamp: 4;
 }
 
 .card-footer {
   padding: 5px;
   margin-top: 5px;
-  font-weight: 500;
   font-size: 14px;
-  background: #F4F4F4;
+  font-weight: 500;
   border-radius: 0px 0px 5px 5px;
+  background: var(--card-footer-color);
 }
 
 .card-footer .author {

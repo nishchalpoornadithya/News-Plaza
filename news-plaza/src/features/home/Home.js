@@ -5,21 +5,23 @@ import axios from "axios";
 import { AppConstants } from "../../constants/AppContants";
 
 import NavBar from "../../components/shared/nav-bar/NavBar";
-
-import "./Home.css";
 import Card from "../../components/shared/card/Card";
 
+import "./Home.css";
+
 function Home(props) {
+
 	const [news, setNews] = useState(null);
 
 	useEffect(() => {
-    getNews(AppConstants.NAVBAR_ITEMS[0]);
+    // fetch news for first item in list by default
+    getNews(AppConstants.APPLICATION.NAVBAR_ITEMS[0]);
 	}, []);
 
   /*** METHODS ***/
 
   const getNews = (keyWord) => {
-		axios.get(`https://newsapi.org/v2/everything?q=${keyWord}&from=2021-08-28&sortBy=popularity&apiKey=d5a9f68002b7499990ddc975a3be3b95&pageSize=8&page=1`).then(
+		axios.get(`https://newsapi.org/v2/everything?q=${keyWord}&from=${AppConstants.APPLICATION.NEWS_DATE}&sortBy=${AppConstants.APPLICATION.NEWS_DEFAULT_RELEVANCE}&apiKey=${AppConstants.USER.API_KEY}&pageSize=${AppConstants.APPLICATION.NEWS_PAGE_SIZE}&page=${AppConstants.APPLICATION.NEWS_DEFAULT_PAGE_NUMBER}`).then(
 			(response) => {
 				if (response && response.data) {
 					setNews(response.data.articles);
@@ -32,7 +34,11 @@ function Home(props) {
   }
 
   const viewMoreClicked = (index) => {
-    window.open(news[index].url, '_blank').focus();
+    if(news[index].url) {
+      window.open(news[index].url, '_blank').focus();
+    } else {
+      window.alert('Sorry! The news link does not exit');
+    }
   }
 
   /*** VIEWS ***/
@@ -40,7 +46,7 @@ function Home(props) {
 	return (
 		<div className="home-container">
 			<section className="nav-bar-container">
-				<NavBar navBarItems={AppConstants.NAVBAR_ITEMS} handleNavItemClicked={(navBarItem) => getNews(navBarItem)}/>
+				<NavBar navBarItems={AppConstants.APPLICATION.NAVBAR_ITEMS} handleNavItemClicked={(navBarItem) => getNews(navBarItem)}/>
 			</section>
 			<section className="news-items-container">
 				{news && news.length 

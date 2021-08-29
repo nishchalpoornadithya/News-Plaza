@@ -8,15 +8,18 @@
 
 .nav-bar-item {
   font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--light-orange);
+
   padding: 5px;
+
   border-width: 1px;
   border-style: solid;
   border-color: var(--light-orange);
   box-sizing: border-box;
   border-radius: 8px;
-  text-transform: uppercase;
-  color: var(--light-orange);
-  font-weight: 700;
+
   cursor: pointer;
   transition: border .4s ease-in;
 }

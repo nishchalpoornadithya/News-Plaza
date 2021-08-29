@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import classNames from 'classnames';
+
 import "./NavBar.css";
 
 function NavBar(props) {
@@ -22,8 +23,6 @@ function NavBar(props) {
 			{navBarItems && navBarItems.length ? (
 				<nav className="nav-bar">
 					{navBarItems.map((navBarItem, index) => {
-            {console.log(hightlightedIndex)}
-            {console.log(index)}
 					  return  <span key={`nav-bar-item-${index}`} className={classNames(['nav-bar-item', {
               'nav-bar-highlight': hightlightedIndex === index
             }])} onClick={() => navItemClicked(navBarItem, index)}>{navBarItem}</span>
