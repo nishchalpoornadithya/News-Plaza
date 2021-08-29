@@ -3,6 +3,9 @@ import React from "react";
 import "./Card.css";
 
 function Card(props) {
+
+  const { handleViewMoreClick } = props;
+
 	const { imgUrl, cardHeader, description, author, timeStamp, routeText } = props;
 
 	return (
@@ -15,10 +18,10 @@ function Card(props) {
 			</header>
 			<div className="card-body text-overflow">{description}</div>
 			<div className="card-footer">
-				<div className="author">{author}</div>
+				<div className="author text-overflow">{author}</div>
 				<footer className="additional-details">
 					<time className="time-stamp">{timeStamp}</time>
-					<div className="route-text">{routeText}</div>
+					<div className="route-text" onClick={() => handleViewMoreClick()}>{routeText}</div>
 				</footer>
 			</div>
 		</div>

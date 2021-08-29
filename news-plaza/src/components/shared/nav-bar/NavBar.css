@@ -6,13 +6,22 @@
   justify-content: space-evenly;
 }
 
-.nav-bar-container .nav-bar .nav-bar-item {
+.nav-bar-item {
   font-size: 12px;
   padding: 5px;
-  border: 1px solid var(--light-orange);
-  border-radius: 12px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--light-orange);
+  box-sizing: border-box;
+  border-radius: 8px;
   text-transform: uppercase;
   color: var(--light-orange);
   font-weight: 700;
   cursor: pointer;
+  transition: border .4s ease-in;
+}
+
+.nav-bar-highlight{
+  background-color:  var(--light-orange);
+  color: white;
 }
