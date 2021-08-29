@@ -1,0 +1,18 @@
+
+@import '../../../assets/css-variables.css';
+
+.nav-bar-container .nav-bar {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nav-bar-container .nav-bar .nav-bar-item {
+  font-size: 12px;
+  padding: 5px;
+  border: 1px solid var(--light-orange);
+  border-radius: 12px;
+  text-transform: uppercase;
+  color: var(--light-orange);
+  font-weight: 700;
+  cursor: pointer;
+}

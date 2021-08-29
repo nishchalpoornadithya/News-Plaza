@@ -1,0 +1,11 @@
+
+.home-container {
+  margin: 10px 15%;
+}
+
+.news-items-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
