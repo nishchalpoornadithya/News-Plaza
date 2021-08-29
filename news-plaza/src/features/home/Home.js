@@ -34,8 +34,8 @@ function Home(props) {
 			<section className="news-items-container">
 				{news && news.length 
 					?
-            news.map((newsItem) => {
-							return <Card imgUrl={newsItem.urlToImage} cardHeader={newsItem.title} description={newsItem.description} author={newsItem.author} timeStamp={newsItem.publishedAt} routeText={"more..."} />;
+            news.map((newsItem, index) => {
+							return <Card key={`news-card-${index}`} imgUrl={newsItem.urlToImage} cardHeader={newsItem.title} description={newsItem.description} author={newsItem.author} timeStamp={newsItem.publishedAt} routeText={"more..."} />;
 					  })
 					: null}
 			</section>

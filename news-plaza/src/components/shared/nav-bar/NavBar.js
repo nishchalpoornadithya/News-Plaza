@@ -11,7 +11,7 @@ function NavBar(props) {
 			{navBarItems && navBarItems.length ? (
 				<nav className="nav-bar">
 					{navBarItems.map((navBarItem, index) => {
-					  return  <span key={index} className="nav-bar-item">{navBarItem}</span>
+					  return  <span key={`nav-bar-item-${index}`} className="nav-bar-item">{navBarItem}</span>
 					})}
 				</nav>
 			) : null}

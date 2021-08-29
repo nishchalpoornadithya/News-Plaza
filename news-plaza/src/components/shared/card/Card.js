@@ -9,11 +9,11 @@ function Card(props) {
 		<div className="card">
 			<header className="card-header">
 				<figure>
-					<img src={imgUrl} alt="Img" />
+					<div className="news-item-image" style={{'background': `url(${imgUrl})`}} alt="Img"></div>
 				</figure>
-				<h3>{cardHeader}</h3>
+				<h4 className='text-overflow'>{cardHeader}</h4>
 			</header>
-			<div className="card-body">{description}</div>
+			<div className="card-body text-overflow">{description}</div>
 			<div className="card-footer">
 				<div className="author">{author}</div>
 				<footer className="additional-details">
