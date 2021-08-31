@@ -1,5 +1,6 @@
 import React from "react";
 
+import moment from "moment";
 import "./Card.css";
 
 function Card(props) {
@@ -22,7 +23,7 @@ function Card(props) {
 				<div className="card-footer">
 					<div className="author text-overflow">{author}</div>
 					<footer className="additional-details">
-						<time className="time-stamp">{timeStamp}</time>
+						<time className="time-stamp">{moment(timeStamp).format('ll')}</time>
 						<div className="route-text">{routeText}</div>
 					</footer>
 				</div>
