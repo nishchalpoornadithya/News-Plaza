@@ -17,7 +17,7 @@ function Card(props) {
 					</figure>
 					<h4 className="text-overflow">{cardHeader}</h4>
 				</header>
-				<div className="card-body text-overflow">{description}</div>
+				<div className="card-body text-overflow" dangerouslySetInnerHTML={{__html: `<div>${description}</div>`}}></div>
 			</section>
 			<section>
 				<div className="card-footer">

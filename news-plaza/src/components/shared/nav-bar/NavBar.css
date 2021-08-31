@@ -1,29 +1,28 @@
 @import "../../../assets/css-variables.css";
 
 .nav-bar-container .nav-bar {
-	display: flex;
-	justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .nav-bar-item {
   display: flex;
   align-items: center;
-    
-	font-size: .8rem;
-	font-weight: 700;
-	text-transform: uppercase;
-	color: var(--light-orange);
 
-	padding: 7px 12px;
-
-	border-width: 1px;
-	border-style: solid;
-	border-color: var(--lighter-orange);
-	box-sizing: border-box;
-	border-radius: 16px;
-
-	cursor: pointer;
-	transition: border 0.4s ease-in;
+  font-size: .8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--light-orange);
+  padding: 7px 12px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: var(--lighter-orange);
+  box-sizing: border-box;
+  border-radius: 16px;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: border 0.4s ease-in;
 }
 
 .nav-bar-highlight {
